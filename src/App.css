@@ -1,0 +1,1030 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+   overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+.home{
+    border-bottom: 3px solid red;
+}
+.HomeContent{
+    position: relative;
+    top: -350px;
+}
+
+.head1{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+.para1{
+    font-size: 14px;
+    color: whitesmoke;
+}
+button{
+    background-color: rgb(223, 53, 53);
+    padding: 10px 24px;
+    color: white;
+    border-radius: 5px;
+}
+.courseSection{
+    position: relative;
+    top: -120px;
+}
+.cards{
+    padding: 40px;
+    border-radius: 10px;
+}
+.star{
+    color: rgb(255, 208, 0);
+   
+}
+.subsectionContent{
+     position: relative;
+    top: -80px;
+}
+.buildings{
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.campusImages{
+     position: relative;
+    top: 80px;
+}
+.facilites{
+    position: relative;
+    top: 80px;
+}
+.content{
+    position: relative;
+    top: 140px;
+}
+.facilitiesCard{
+    width: 400px;
+}
+.review{
+    position: relative;
+    top: 240px;
+}
+.meeting{
+   position: relative;
+    top: 290px; 
+    padding: 20px;
+}
+.meetingImage{
+    border-radius: 10px;
+}
+.contact{
+    position: relative;
+    top: 280px;
+}
+
+footer{
+   position: relative;
+   top: 260px;
+}
+.contactContent{
+   position: relative;
+   top: 100px;
+}
+.head2{
+    position: relative;
+    top: 100px;
+     font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.contactMap{
+    
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ===== NAVBAR ===== */
+
+
+.university-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+
+.navbar-container {
+  max-width: 1280px;
+  min-height: 75px;
+  margin: 0 auto;
+  padding: 12px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.navbar-logo span {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Desktop navigation */
+
+.navbar-menu {
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #f44336;
+}
+
+/* Toggle button: hidden on desktop */
+
+.navbar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 6px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navbar-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggle:focus-visible {
+  outline: 2px solid #f44336;
+  outline-offset: 3px;
+}
+
+/* ===== TABLET AND MOBILE ===== */
+
+@media screen and (max-width: 768px) {
+
+  .navbar-container {
+    min-height: 70px;
+    padding: 12px 18px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .navbar-logo span {
+    font-size: 22px;
+  }
+
+  .navbar-logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Show hamburger/cross button */
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  /* Hide menu until toggle is clicked */
+
+  .navbar-menu {
+    display: none;
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 12px;
+    padding: 10px 0 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Show menu when React adds active class */
+
+  .navbar-menu.active {
+    display: block;
+    animation: navbarSlideDown 0.25s ease;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-links a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  .navbar-links a:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Smaller mobile screens */
+
+@media screen and (max-width: 360px) {
+  .navbar-container {
+    padding: 10px 12px;
+  }
+
+  .navbar-logo {
+    gap: 8px;
+  }
+
+  .navbar-logo span {
+    font-size: 20px;
+  }
+
+  .navbar-logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Dropdown animation */
+
+@keyframes navbarSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-menu.active {
+    animation: none;
+  }
+
+  .navbar-links a {
+    transition: none;
+  }
+}
+
+
+
+
+/* ==============================
+   GLOBAL SMOOTH HOVER EFFECTS
+============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
+a,
+img,
+.cards,
+.facilitiesCard {
+  transition: all 0.3s ease;
+}
+
+/* ==============================
+   NAVBAR LINKS HOVER
+============================== */
+
+.navbar-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 0;
+  height: 2px;
+  background: #f44336;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #f44336;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* ==============================
+   NAVBAR TOGGLE HOVER
+============================== */
+
+.navbar-toggle {
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.08);
+}
+
+/* ==============================
+   HERO SECTION BUTTONS
+============================== */
+
+.HomeContent button {
+  cursor: pointer;
+  border: 2px solid #f44336;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.HomeContent button:hover {
+  background: #f44336;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(244, 67, 54, 0.3);
+}
+
+.HomeContent button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* ==============================
+   COURSE CARDS
+============================== */
+
+.cards {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  background: #fff1f0;
+}
+
+/* ==============================
+   CAMPUS IMAGES
+============================== */
+
+.campusImages > div {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.buildings {
+  display: block;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.campusImages > div:hover .buildings {
+  transform: scale(1.07);
+  filter: brightness(0.85);
+}
+
+/* ==============================
+   FACILITIES CARDS
+============================== */
+
+.facilitiesCard {
+  border-radius: 12px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.facilitiesCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.facilitiesCard img {
+  transition: transform 0.5s ease;
+}
+
+.facilitiesCard:hover img {
+  transform: scale(1.04);
+}
+
+/* ==============================
+   STUDENT REVIEW CARDS
+============================== */
+
+.review .bg-red-50 {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review .bg-red-50:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   STAR HOVER EFFECT
+============================== */
+
+.star {
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.star:hover {
+  transform: scale(1.3) rotate(8deg);
+}
+
+/* ==============================
+   CONTACT FORM
+============================== */
+
+.contact input,
+.contact textarea {
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #f44336;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.12);
+  outline: none;
+}
+
+.contact button {
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(244, 67, 54, 0.25);
+}
+
+/* ==============================
+   FOOTER LINKS
+============================== */
+
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #f44336;
+}
+
+/* ==============================
+   ACCESSIBILITY
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+/* Global Campus Cards */
+
+.campusCard {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Campus Images */
+
+.campusCard .buildings {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Dark overlay */
+
+.campusOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(244, 67, 54, 0.65);
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* City Name */
+
+.campusOverlay h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+/* Hover Effects */
+
+.campusCard:hover .buildings {
+  filter: blur(2px) brightness(0.7);
+  transform: scale(1.08);
+}
+
+.campusCard:hover .campusOverlay {
+  opacity: 1;
+}
+
+.campusCard:hover .campusOverlay h2 {
+  transform: translateY(0);
+}
+
+/* Keyboard accessibility */
+
+.campusCard:focus-within .campusOverlay {
+  opacity: 1;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+  .campusCard {
+    width: min(100%, 350px);
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .campusCard {
+    height: 300px;
+  }
+
+  .campusOverlay h2 {
+    font-size: 24px;
+  }
+}
+
+
+
+/* ========== CONTACT SECTION ========== */
+
+.contact-section {
+  padding: 80px 7%;
+  background: #fff;
+  color: #222;
+}
+
+.contact-title {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.contact-title h1 {
+  margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+}
+
+.contact-title > p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 45px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Contact form */
+
+.contact-form {
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2,
+.contact-details h2 {
+  margin: 0 0 25px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+  color: #222;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input {
+  min-height: 46px;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f44336;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.08);
+  background: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+}
+
+.contact-btn {
+  padding: 13px 27px;
+  border: 1px solid #f44336;
+  border-radius: 0;
+  background: #f44336;
+  color: white;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+  background: #f44336b9;
+  color: #fff;
+}
+
+/* Contact information */
+
+.contact-details {
+  padding: 12px 0;
+}
+
+.contact-details > p {
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.contact-symbol {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff0ef;
+  color: #f44336;
+  font-size: 21px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.contact-item:hover .contact-symbol {
+  background: #f44336;
+  color: #fff;
+}
+
+.contact-item h4 {
+  margin-bottom: 5px;
+  color: #222;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-item p {
+  color: #666;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.contact-note {
+  margin-top: 35px;
+  padding: 22px;
+  border-left: 3px solid #f44336;
+  background: #fafafa;
+}
+
+.contact-note h3 {
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 16px;
+}
+
+.contact-note p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ========== FOOTER ========== */
+
+.eduford-footer {
+    position: relative;
+    top: -0px;
+  padding: 55px 7% 0;
+  background: #222;
+  color: #ccc;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #f44336;
+}
+
+.footer-about > p {
+  max-width: 310px;
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  position: relative;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer-links h3::after,
+.footer-contact h3::after {
+  display: block;
+  width: 35px;
+  height: 2px;
+  margin-top: 10px;
+  background: #f44336;
+  content: "";
+}
+
+.footer-links a {
+  display: block;
+  width: fit-content;
+  margin-bottom: 15px;
+  color: #bbb;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f44336;
+  transform: translateX(4px);
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 17px;
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact p span {
+  color: #f44336;
+}
+
+/* Footer bottom bar */
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.back-to-top {
+  color: #f44336;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-to-top:hover {
+  color: #fff;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 25px;
+  }
+
+  .contact-form {
+    padding: 24px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-section {
+    padding: 55px 20px;
+  }
+
+  .contact-title h1 {
+    font-size: 30px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-form {
+    padding: 22px 18px;
+  }
+
+  .contact-details {
+    padding: 0;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+
+  .eduford-footer {
+    padding: 40px 22px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
